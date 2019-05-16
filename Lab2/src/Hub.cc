@@ -1,4 +1,4 @@
-
+// deneme
 #include <stdio.h>
 #include <string.h>
 #include <omnetpp.h>
