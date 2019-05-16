@@ -1,4 +1,4 @@
-// deneme
+
 #include <stdio.h>
 #include <string.h>
 #include <omnetpp.h>
@@ -18,7 +18,7 @@ class Hub : public cSimpleModule
 
     void Hub::initialize()
     {
-        
+         a=(int*)calloc(sizeof(int),gateSize("out")); //bellekten yer ayrýldý ve bellek daha sonrasýnda sýfýrlandý
     }
 
     void Hub::handleMessage(cMessage *msg)
@@ -39,7 +39,7 @@ class Hub : public cSimpleModule
 
             }
 
-            
+            a[g->getIndex()] = (a[g->getIndex()]+1)%3; //parametreye göre mod3 de case lere giriþ yapýlýyor. 
 
         }
 
